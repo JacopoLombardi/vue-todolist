@@ -24,15 +24,15 @@ createApp({
                text: '4° task',
                done: false
             },
+            {
+               text: '5° task',
+               done: false
+            },
          ],
-
-         newObject:{
-            text: '',
-            done: false
-         },
 
          newTask: '',
 
+         messageError: '',
       };
    },
 
@@ -41,25 +41,39 @@ createApp({
    // funzioni
    methods:{
 
-      addTask(newTask){
-         this.newObject.text = newTask;
-         this.toDoArray.unshift(this.newObject)
-         
+      // aggiungo una nuova task
+      addTask(){
+         this.messageError = '';
+
+         if(this.newTask.length > 3){
+         this.toDoArray.unshift({
+            text: this.newTask,
+            done: false
+         });
+         this.newTask = '';
+         }else{
+            this.messageError = 'Errore!! Task troppo corta';
+            this.newTask = '';
+         };
       },
 
 
+
+      // cacello la task
       canceled(indice){
         this.toDoArray.splice(indice, 1);
       },
+
+
 
 
    },
 
 
 
+
    monted(){
-
-
    }
+
 
 }).mount('#app');
