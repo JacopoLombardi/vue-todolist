@@ -33,6 +33,7 @@ createApp({
          newTask: '',
 
          messageError: '',
+         messageEmptyList: '',
       };
    },
 
@@ -63,8 +64,16 @@ createApp({
          if(this.toDoArray[indice].done === true)
             this.toDoArray.splice(indice, 1);
       },
-   },
 
+
+
+      // se la lista è vuota stampa un messaggio
+      toDoListEmpty(){
+         if(this.toDoArray.length === 0){
+            return messageEmptyList = 'Hai terminato tutti i compiti';
+         };
+      }
+   },
 
 
 

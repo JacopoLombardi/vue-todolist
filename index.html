@@ -47,9 +47,9 @@
 
     <!-- task list -->
     <div class="task-container">
-
+      
       <ul>
- 
+        
         <li
           v-for="(task, i) in toDoArray"
           @click="task.done = !task.done"
@@ -64,6 +64,9 @@
 
       </ul>
 
+      <!-- se non ci sono più task stampa questo -->
+      <h4>{{toDoListEmpty()}}</h4>
+      
     </div>
 
   </div>
