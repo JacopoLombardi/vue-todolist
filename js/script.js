@@ -4,6 +4,7 @@ const {createApp} = Vue;
 
 createApp({
 
+   // variabili
    data(){
       return{
          toDoArray:[
@@ -28,12 +29,15 @@ createApp({
 
       };
    },
+   
 
 
-
+   // funzioni
    methods:{
 
-      
+      canceled(indice){
+        this.toDoArray.splice(indice, 1);
+      },
 
 
    },

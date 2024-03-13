@@ -46,12 +46,12 @@
       <ul>
 
         <li
-          v-for="task in toDoArray"
+          v-for="(task, i) in toDoArray"
           @click="task.done = !task.done"
           :class="{'done': task.done}"
         >
           <span>{{task.text}}</span>
-          <i class="fa-solid fa-trash-can"></i>
+          <i @click.stop="canceled(i)" class="fa-solid fa-trash-can"></i>
         </li>
 
       </ul>
