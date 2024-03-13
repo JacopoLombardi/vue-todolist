@@ -1,7 +1,7 @@
 Vue todolist
 ===
-1. 
-2. 
+1. Partiamo da una base di HTML e CSS.
+2. Stampiamo le task dell'array dinamicamente.
 3. 
 4. 
 5. 

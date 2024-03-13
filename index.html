@@ -43,8 +43,8 @@
     <!-- task list -->
     <div class="task-container">
       <ul>
-        <li>
-          <span>task....</span>
+        <li v-for="task in toDoArray">
+          <span>{{task.text}}</span>
           <i class="fa-solid fa-trash-can"></i>
         </li>
 
