@@ -35,8 +35,13 @@
 
     <!-- input -->
     <div class="new-task  mt-5">
-      <input placeholder="Nuovo task"type="text">
-      <button class="btn  btn-primary  rounded-5  px-4">Aggiungi</button>
+      <input 
+        placeholder="Nuovo task" 
+        type="text" 
+        v-model="newTask" 
+        @keyup.enter="addTask(newTask)"
+      >
+      <button @click="addTask(newTask)" class="btn  btn-primary  rounded-5  px-4  fw-semibold">Add</button>
       <p class="error"></p>
     </div>
 
@@ -44,7 +49,7 @@
     <div class="task-container">
 
       <ul>
-
+ 
         <li
           v-for="(task, i) in toDoArray"
           @click="task.done = !task.done"
