@@ -6,5 +6,5 @@ Vue todolist
 4. Aggiungiamo la classe 'done' se la proprietà done è true.
 5. Cliccando l'icona del cestino, la task si elimina.
 6. Inserendo una stringa nell'input, genera una nuova task.
-7. 
+7. Si può eliminare una Task solamente se è stata precedentemente flaggata con done = true.
 8. 

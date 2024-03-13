@@ -44,29 +44,25 @@ createApp({
       // aggiungo una nuova task
       addTask(){
          this.messageError = '';
-
+         
          if(this.newTask.length > 3){
          this.toDoArray.unshift({
             text: this.newTask,
             done: false
          });
-         this.newTask = '';
          }else{
             this.messageError = 'Errore!! Task troppo corta';
-            this.newTask = '';
          };
+         this.newTask = '';
       },
 
 
 
       // cacello la task
       canceled(indice){
-        this.toDoArray.splice(indice, 1);
+         if(this.toDoArray[indice].done === true)
+            this.toDoArray.splice(indice, 1);
       },
-
-
-
-
    },
 
 
