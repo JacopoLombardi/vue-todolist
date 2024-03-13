@@ -23,7 +23,7 @@ createApp({
                text: '4° task',
                done: false
             },
-         ]
+         ],
 
 
       };
